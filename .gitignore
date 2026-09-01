@@ -1,0 +1,12 @@
+# рендер картинок кладёт PNG рядом с HTML — исходник в гите, результат нет
+templates/img/*.png
+content/posts/*/img/*.png
+
+# системное
+.DS_Store
+Thumbs.db
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.local
