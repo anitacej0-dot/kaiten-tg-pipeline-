@@ -78,8 +78,9 @@ npx @puppeteer/browsers install chrome@stable   # один раз, для рен
 Репозиторий открывается в Claude Code как есть: скилл `/post` подхватывается из
 `.claude/skills/post/SKILL.md`, остальное читается по ссылкам из этого README.
 
-PNG-картинки в гит не кладутся: в репозитории лежат HTML-макеты в `templates/img/`,
-а сами файлы каждый рендерит у себя через `scripts/render-images.mjs`.
+Картинки лежат в репозитории готовыми: и HTML-макеты в `templates/img/`, и
+отрендеренные из них PNG рядом. Перерисовать после правки макета —
+`node scripts/render-images.mjs templates/img/<макет>.html`.
 
 ## Чего здесь нет
 
