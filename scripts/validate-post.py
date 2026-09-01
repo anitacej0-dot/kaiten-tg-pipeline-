@@ -10,7 +10,7 @@
   - длина поста: лимит Телеграма 4096 знаков
   - первая строка: до 90 знаков видно в пуше, в них нужен крючок (цифра, вопрос или имя)
   - глубина продукта: минимум 2 абзаца с продуктовой конкретикой
-  - ссылка (можно отключить флагом --no-link, например для дайджеста)
+  - ссылка на kaiten.ru, базу знаний kaiten.site, t.me или habr (отключается флагом --no-link)
   - разнообразие внутри набора: похожесть вариантов по 3-граммам, одинаковые первые строки
 
 ICP-сверку скрипт НЕ делает - это шаг рассуждения агента, скрипт про неё напоминает.
@@ -108,10 +108,10 @@ def check(name: str, html: str, need_link: bool):
     if len(deep) < 2:
         fails.append(f"глубина продукта: абзацев с конкретикой {len(deep)}, нужно 2")
 
-    if need_link and not re.search(r"kaiten\.ru|t\.me/|habr\.com", low):
+    if need_link and not re.search(r"kaiten\.ru|kaiten\.site|t\.me/|habr\.com", low):
         fails.append("нет ссылки (отключается флагом --no-link)")
 
-    if not re.search(r"[?]\s*$", plain.strip()) and not re.search(r"kaiten\.ru", low):
+    if not re.search(r"[?]\s*$", plain.strip()) and not re.search(r"kaiten\.ru|kaiten\.site", low):
         warns.append("нет ни вопроса-вовлечения в конце, ни ссылки")
 
     return fails, warns
