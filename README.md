@@ -64,12 +64,22 @@ node scripts/render-images.mjs templates/img/big-number.html   # HTML → PNG 2�
 ## Первый запуск
 
 ```bash
+git clone https://github.com/anitacej0-dot/kaiten-tg-pipeline-.git
+cd kaiten-tg-pipeline-
+```
+
+```bash
 node --version          # нужен Node 18+
 python --version        # нужен Python 3.10+
 npx @puppeteer/browsers install chrome@stable   # один раз, для рендера картинок
 ```
 
 Ничего ставить через npm install не нужно: скрипты работают на стандартной библиотеке.
+Репозиторий открывается в Claude Code как есть: скилл `/post` подхватывается из
+`.claude/skills/post/SKILL.md`, остальное читается по ссылкам из этого README.
+
+PNG-картинки в гит не кладутся: в репозитории лежат HTML-макеты в `templates/img/`,
+а сами файлы каждый рендерит у себя через `scripts/render-images.mjs`.
 
 ## Чего здесь нет
 
