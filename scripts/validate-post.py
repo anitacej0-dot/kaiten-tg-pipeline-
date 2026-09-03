@@ -29,8 +29,9 @@ SOFT (warn):
 Разнообразие набора: похожесть вариантов по 3-граммам, одинаковые первые строки.
 
 Формат файла: варианты в блоках ```post ... ``` внутри разделов ## Вариант N · <жанр>.
-Тип поста берётся из заголовка раздела (дайджест, обновление, кейс, как сделать)
-или из флага --type.
+Тип поста берётся из заголовка раздела (дайджест, обновление, кейс) или из флага --type.
+«Как сделать» это не отдельный тип, а вариант карусели у обновления: метка
+принимается как синоним, проверки идут по типу «обновление».
 
 Запуск:
     python scripts/validate-post.py content/posts/<slug>/post.md
@@ -51,7 +52,15 @@ TYPE_LENGTH = {
     "дайджест": (880, 1950),
     "обновление": (750, 1550),
     "кейс": (820, 1050),
-    "как сделать": (750, 1550),
+}
+
+# «Как сделать» это не тип текста, а вариант карусели у обновления: шаги живут
+# в карточках, текст остаётся обновлением (эталон #1452). Метку принимаем как синоним.
+TYPE_ALIASES = {
+    "как сделать": "обновление",
+    "инструкция": "обновление",
+    "фича": "обновление",
+    "статья": "кейс",
 }
 
 PRODUCT_KW = [
@@ -119,7 +128,10 @@ def detect_type(name):
     for t in TYPE_LENGTH:
         if t in low:
             return t
-    if "фича" in low or "функци" in low:
+    for alias, t in TYPE_ALIASES.items():
+        if alias in low:
+            return t
+    if "функци" in low:
         return "обновление"
     return None
 
@@ -165,9 +177,6 @@ def check_type_rules(ptype, text, first):
             fails.append("в кейсе нет подписи героя «Опытом делится <Имя>, <должность> <Компания>»")
         if not re.search(r"\d", text[:400]):
             warns.append("в первых абзацах кейса нет цифр масштаба")
-    elif ptype == "как сделать":
-        if not re.search(r"^\s*\d[.)]\s", text, re.M):
-            warns.append("в инструкции нет нумерованных шагов")
     return fails, warns
 
 
@@ -299,8 +308,10 @@ def main():
     for a in argv:
         if a.startswith("--type="):
             forced = a.split("=", 1)[1].strip().lower()
+            forced = TYPE_ALIASES.get(forced, forced)
             if forced not in TYPE_LENGTH:
-                sys.exit(f"неизвестный тип «{forced}», доступны: {', '.join(TYPE_LENGTH)}")
+                sys.exit(f"неизвестный тип «{forced}», доступны: {', '.join(TYPE_LENGTH)}"
+                         f" (синонимы: {', '.join(TYPE_ALIASES)})")
     if not paths:
         print(__doc__)
         sys.exit(2)
