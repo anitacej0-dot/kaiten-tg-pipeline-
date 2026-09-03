@@ -8,7 +8,7 @@
 |---|---|
 | https://faq-ru.kaiten.site/prosmotr-zavershennyh-iteraciy | вся фактура ниже, скриншоты интерфейса |
 | https://faq-ru.kaiten.site/iteracii-mehanika-upravleniya-sprintami | итерации как вид пространства |
-| https://faq-ru.kaiten.site/modul-scrum | модуль, в котором живут итерации |
+| https://faq-ru.kaiten.site/modul-scrum | модуль, к которому относятся итерации |
 | https://faq-ru.kaiten.site/burndown-chart-grafik-sgoraniya-zadach-otchet-po-sprintu | график сгорания, прежний способ посмотреть период |
 | [../../../references/real-posts.md](../../../references/real-posts.md) | пост канала от 10.07.2026 про запуск итераций |
 
