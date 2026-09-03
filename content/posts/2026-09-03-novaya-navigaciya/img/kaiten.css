@@ -1,0 +1,196 @@
+/* Система карточек канала @kaiten_ru. Токены дизайн-системы Kaiten v01.
+   Собрано по 24 реальным макетам канала: дайджест, обновление, как сделать, кейс.
+   Меняешь текст в HTML, стили не трогаешь. Размер кадра - data-w/data-h на <body>.
+
+   ПРАВИЛО РЕДАКЦИИ: буквы «е» вместо «е» с точками нигде в макетах. */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+:root {
+  --violet: #7d4ccf;
+  --violet-12: #efe9f9;
+  --violet-hover: #6f43b8;
+  --yellow: #ffa100;          /* orange-100 из tokens.json, акцент обложки дайджеста */
+  --text: #2d2d2d;
+  --muted: #757575;
+  --border: #e0e0e0;
+  --bg: #ffffff;
+  --lav: #f0edfa;             /* лавандовый фон карточек */
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  font-family: Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text);
+}
+
+.frame {
+  position: relative;
+  width: 1080px; height: 1080px;
+  overflow: hidden;
+  background: var(--bg);
+  display: flex;
+}
+.frame.lav { background: var(--lav); }
+
+.inner {
+  position: relative; flex: 1;
+  padding: 74px 76px 62px;
+  display: flex; flex-direction: column;
+}
+
+/* --- шапка карточки: кикер слева, счетчик справа --------------------------- */
+.head { display: flex; align-items: flex-start; justify-content: space-between; }
+.kicker {
+  font-size: 26px; font-weight: 700; color: var(--violet);
+  text-transform: uppercase; letter-spacing: 1.4px;
+}
+.counter { font-size: 26px; font-weight: 500; color: #a5a5ad; letter-spacing: .6px; }
+
+/* --- заголовок и подзаголовок --------------------------------------------- */
+.h {
+  margin: 46px 0 0; font-weight: 900; font-size: 62px;
+  line-height: 1.06; letter-spacing: -1.6px;
+}
+.h .hl { color: var(--violet); }
+.h.sm { font-size: 52px; }
+
+.lead {
+  margin-top: 26px; font-size: 30px; font-weight: 400;
+  color: var(--muted); line-height: 1.36; max-width: 900px;
+}
+.lead b { font-weight: 700; color: var(--muted); }
+
+/* --- скриншот -------------------------------------------------------------- */
+.shot {
+  margin-top: 44px; border: 1px solid var(--border); border-radius: 20px;
+  overflow: hidden; background: #fff;
+}
+.shot.pad { background: var(--violet-12); border-color: transparent; padding: 34px; }
+.shot.violet { border: 3px solid var(--violet); border-radius: 22px; }
+.shot img { display: block; width: 100%; }
+
+/* заглушка на время верстки, заменяется реальным скриншотом */
+.shot .stub {
+  height: 380px; display: flex; align-items: center; justify-content: center;
+  background: #fafafa; color: #b8b8c2; font-size: 26px; font-weight: 500;
+}
+
+/* подпись под скриншотом */
+.cap {
+  margin-top: 40px; font-size: 29px; font-weight: 400;
+  color: var(--muted); line-height: 1.4;
+}
+.cap b { font-weight: 700; color: var(--violet); }
+
+/* --- эмодзи-стикер в белой плашке (кейсы) ---------------------------------- */
+.sticker {
+  position: absolute; width: 128px; height: 128px; border-radius: 30px;
+  background: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 74px; box-shadow: 0 18px 40px -18px rgba(31, 42, 55, .35);
+}
+
+/* --- подвал ---------------------------------------------------------------- */
+.foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 34px; }
+.logo { height: 40px; }
+.next {
+  width: 76px; height: 76px; border-radius: 50%; background: var(--violet);
+  color: #fff; font-size: 34px; display: flex; align-items: center; justify-content: center;
+}
+
+/* --- плашка-цитата героя --------------------------------------------------- */
+.quote {
+  margin-top: 44px; background: var(--violet-12); border-radius: 18px;
+  padding: 32px 36px; font-size: 30px; font-weight: 500; line-height: 1.35;
+}
+
+/* --- нумерованный таймлайн (белые карточки с кружками) --------------------- */
+.numlist { margin-top: 42px; display: flex; flex-direction: column; gap: 20px; }
+.numlist .row {
+  background: #fff; border-radius: 18px; padding: 28px 32px;
+  display: flex; align-items: flex-start; gap: 26px;
+}
+.numlist .n {
+  width: 52px; height: 52px; border-radius: 50%; background: var(--violet);
+  color: #fff; font-size: 26px; font-weight: 700; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.numlist .t { font-size: 32px; font-weight: 700; line-height: 1.2; }
+.numlist .d { margin-top: 10px; font-size: 26px; font-weight: 400; color: var(--muted); line-height: 1.3; }
+
+/* --- список плашек-строк --------------------------------------------------- */
+.rows { margin-top: 42px; display: flex; flex-direction: column; gap: 14px; }
+.rows .r {
+  background: #fff; border: 1px solid #efeff3; border-radius: 14px;
+  padding: 24px 30px; font-size: 29px; font-weight: 500; line-height: 1.25;
+}
+.rows .r.off {
+  background: transparent; border: 2px dashed #d6d6de; color: #a5a5ad;
+}
+
+/* --- простые буллеты ------------------------------------------------------- */
+.bul { margin: 42px 0 0; padding: 0; list-style: none; }
+.bul li {
+  position: relative; padding-left: 34px; margin-bottom: 30px;
+  font-size: 30px; font-weight: 400; color: var(--muted); line-height: 1.3;
+}
+.bul li::before { content: "•"; position: absolute; left: 4px; color: #b8b8c2; }
+.bul li b { font-weight: 700; color: var(--text); }
+
+/* --- галочки --------------------------------------------------------------- */
+.checks { margin: 46px 0 0; padding: 0; list-style: none; }
+.checks li {
+  position: relative; padding-left: 52px; margin-bottom: 34px;
+  font-size: 31px; font-weight: 400; line-height: 1.32;
+}
+.checks li::before {
+  content: "✓"; position: absolute; left: 0; top: 2px;
+  width: 34px; height: 34px; border-radius: 50%; background: var(--violet-12);
+  color: var(--violet); font-size: 21px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+}
+.checks li b { font-weight: 700; }
+
+/* --- CTA-плашка на всю ширину (финальная карточка кейса) ------------------- */
+.ctabar {
+  margin-top: auto; background: var(--violet); border-radius: 20px;
+  padding: 34px 40px; display: flex; align-items: center; justify-content: space-between;
+  gap: 30px; color: #fff;
+}
+.ctabar .t { font-size: 32px; font-weight: 700; line-height: 1.2; }
+.ctabar .d { margin-top: 10px; font-size: 26px; font-weight: 400; opacity: .92; line-height: 1.3; }
+.ctabar .go {
+  width: 68px; height: 68px; border-radius: 50%; background: #fff; color: var(--violet);
+  font-size: 30px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+/* --- плашки-пилюли --------------------------------------------------------- */
+.pill {
+  display: inline-flex; align-items: center; gap: 14px;
+  border-radius: 999px; padding: 16px 30px; font-size: 28px; font-weight: 500;
+}
+.pill.soft { background: var(--violet-12); color: var(--violet); font-weight: 700; }
+.pill.solid { background: var(--violet); color: #fff; font-weight: 700; }
+.pill.sun { background: var(--yellow); color: var(--text); font-weight: 700; font-size: 34px; }
+
+/* --- обложка дайджеста: декор ---------------------------------------------- */
+.deco { position: absolute; pointer-events: none; }
+.deco.sq { border-radius: 34px; background: #c4b3ea; }
+.deco.dots {
+  width: 118px; height: 118px;
+  background-image: radial-gradient(var(--violet) 26%, transparent 27%);
+  background-size: 24px 24px;
+}
+.deco.loop { border: 14px solid var(--yellow); border-radius: 50%; background: transparent; }
+
+.cover {
+  margin: auto 0; display: flex; flex-direction: column;
+  align-items: center; text-align: center; gap: 30px;
+}
+.cover .h { margin: 0; font-size: 78px; letter-spacing: -2.4px; }
+
+/* --- обложка «как сделать» и обновления ------------------------------------ */
+.tophead { display: flex; align-items: center; justify-content: space-between; }
+.tilt { margin-top: 40px; transform: rotate(-3deg) scale(1.04); transform-origin: 50% 0; }
