@@ -5,7 +5,7 @@
 // поэтому один и тот же исходник нельзя случайно отрендерить в чужом формате.
 //
 // Запуск:
-//   node scripts/render-images.mjs templates/img/big-number.html [...ещё html]
+//   node scripts/render-images.mjs templates/img/digest-card.html [...ещё html]
 //   node scripts/render-images.mjs content/posts/<slug>/img/*.html
 //   CHROME="C:/Program Files/Google/Chrome/Application/chrome.exe" node scripts/render-images.mjs ...
 //

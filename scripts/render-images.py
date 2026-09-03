@@ -12,7 +12,7 @@ Chrome ищется по стандартным путям Windows, macOS и Lin
 окружения CHROME.
 
 Запуск:
-    python scripts/render-images.py templates/img/big-number.html
+    python scripts/render-images.py templates/img/digest-card.html
     python scripts/render-images.py content/posts/<slug>/img/*.html
 """
 import os

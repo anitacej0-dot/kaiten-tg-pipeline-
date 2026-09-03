@@ -3,10 +3,11 @@
   "rubric": "feature",
   "genre": "разбор ошибки",
   "hook_type": "парадокс",
-  "utm_source": "telegram",
-  "utm_medium": "own_channel",
-  "utm_campaign": "feature",
+  "utm_source": "tg",
+  "utm_medium": "social",
+  "utm_campaign": "0109",
   "utm_content": "2026-09-01-zavershennye-iteracii-v1",
+  "illustrations": "карусель: обложка + 3 карточки (сводка, хронология, редактирование)",
   "published_at": null,
   "predictions": {
     "per100": {
