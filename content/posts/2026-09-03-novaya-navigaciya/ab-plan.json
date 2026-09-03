@@ -2,7 +2,7 @@
   "post": "2026-09-03-novaya-navigaciya",
   "type": "обновление",
   "subtype": "2в · преданонс с рубрикатором #Обновление",
-  "illustration": "одиночная картинка (update-single), сравнение меню прежнего и нового вида",
+  "illustration": "одиночная картинка (update-single) со скриншотом из гифки статьи; исходники в img/source",
   "utm_source": "tg",
   "utm_medium": "social",
   "utm_campaign": "0309",
@@ -60,5 +60,6 @@
     }
   },
   "calibration": null,
-  "lessons": []
+  "lessons": [],
+  "illustration_alternatives": "гифка img/source/menyu-sejchas-i-posle.gif годится как самостоятельная иллюстрация: показывает переход от прежнего меню к новому"
 }
