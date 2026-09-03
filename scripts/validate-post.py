@@ -70,6 +70,7 @@ PRODUCT_KW = [
     "загрузк", "дашборд", "отчёт", "отчет", "аналитик", "воронк", "онбординг",
     "чек-лист", "автоматизац", "service desk", "сервис-деск", "заявк", "виджет",
     "шаблон", "простран", "карточк", "итерац", "уведомлен", "каталог", "фильтр",
+    "навигац", "сайдбар", "бета-функц", "чат", "видеовстреч", "story map",
 ]
 
 JUNK = ["font-family", "color:rgb", "<span", "<h4", "&nbsp;", "var(--", "font-size",
@@ -170,7 +171,13 @@ def check_type_rules(ptype, text, first):
         if not re.search(r"в стать[еи]", low):
             warns.append("в дайджесте нет закрывающей ссылки «Об исправленных ошибках — в статье»")
     elif ptype == "обновление":
-        if not text.rstrip().endswith("?") and not re.search(r"\n\S+\s*—\s*\w+", text.rstrip()[-160:]):
+        # Подтип 2в (анонс с рубрикатором #Обновление) закрывается ссылкой,
+        # вопрос-вовлечение там не ставится. Остальные подтипы обязаны спросить.
+        is_announcement = bool(re.match(r"^\W*#[А-Яа-яA-Za-z]", first))
+        if is_announcement:
+            if not re.search(r"(подробнее|читайте)", text.rstrip()[-120:], re.I):
+                warns.append("анонс с рубрикатором закрывается строкой «🔗 Подробнее — в инструкции»")
+        elif not text.rstrip().endswith("?") and not re.search(r"\n\S+\s*—\s*\w+", text.rstrip()[-160:]):
             warns.append("в конце нет вопроса-вовлечения или голосования реакциями")
     elif ptype == "кейс":
         if "опытом делится" not in low:
@@ -239,8 +246,15 @@ def check_variant(name, text, need_link, forced_type):
             f"{'хотя бы раз' if per_para == 1 else 'конкретно'}, всего {len(deep)}, нужно 2"
         )
 
-    if need_link and not re.search(r"kaiten\.ru|kaiten\.site|t\.me/|habr\.com|secrets\.tbank\.ru|github\.com", low):
-        fails.append("нет ссылки (отключается флагом --no-link)")
+    # Канал вшивает ссылку в слово и голых URL не ставит, поэтому засчитываем
+    # и явный домен, и опорную формулу перехода. Что гиперссылка реально проставлена,
+    # проверяет человек глазами перед публикацией.
+    has_url = re.search(r"kaiten\.ru|kaiten\.site|t\.me/|habr\.com|secrets\.tbank\.ru|github\.com", low)
+    has_anchor = re.search(r"в (инструкции|статье|карточках|блоге|документации)", low)
+    if need_link and not (has_url or has_anchor):
+        fails.append("нет ссылки: ни URL, ни формулы перехода «в инструкции» / «в статье»")
+    if need_link and has_anchor and not has_url:
+        warns.append("ссылка вшита в слово: проверить глазами, что гиперссылка проставлена")
 
     tf, tw = check_type_rules(ptype, plain, first)
     fails += tf
@@ -260,8 +274,13 @@ def check_variant(name, text, need_link, forced_type):
     if '"' in plain:
         warns.append('"лапки" вместо «ёлочек»')
 
-    if re.search(r"#[А-Яа-яЁёA-Za-z]", plain):
-        warns.append("хештег: канал их почти не использует")
+    # Хештег-рубрикатор в начале первой строки это формат канала («⚡ #Обновление: …»,
+    # эталон 10.07.2026). Любой другой хештег для канала нехарактерен.
+    tags = re.findall(r"#[А-Яа-яЁёA-Za-z][\w-]*", plain)
+    rubric = re.match(r"^\W*(#[А-Яа-яЁёA-Za-z][\w-]*)", first)
+    extra = [t for t in tags if not (rubric and t == rubric.group(1))]
+    if extra:
+        warns.append(f"хештеги вне рубрикатора первой строки: {', '.join(extra)}")
 
     long_sents = []
     lines = [re.sub(r"^[^\w«]+", "", ln).strip() for ln in plain.split("\n")]
