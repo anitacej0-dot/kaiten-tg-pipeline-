@@ -70,6 +70,7 @@
 ```bash
 python scripts/validate-post.py content/posts/<slug>/post.md   # проверка текста
 python scripts/validate-post.py content/posts/<slug>/post.md --type=дайджест
+python scripts/extract-variant.py content/posts/<slug>/post.md 1  # текст к публикации
 python scripts/check-facts.py                                  # долги по факту
 python scripts/render-images.py content/posts/<slug>/img/*.html   # HTML → PNG 2×
 node scripts/render-images.mjs content/posts/<slug>/img/*.html    # то же на Node
