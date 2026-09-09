@@ -2,8 +2,12 @@
    Собрано по 24 реальным макетам канала: дайджест, обновление, как сделать, кейс.
    Меняешь текст в HTML, стили не трогаешь. Размер кадра - data-w/data-h на <body>.
 
-   ПРАВИЛО РЕДАКЦИИ: буквы «е» вместо «е» с точками нигде в макетах. */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+   ПРАВИЛО РЕДАКЦИИ: буквы «е» вместо «е» с точками нигде в макетах.
+
+   ШРИФТ: Onest. tokens.json дизайн-системы называет Roboto, но на реальных макетах
+   канала (обложки вебинаров, карточки каруселей) стоит другой гротеск. Onest подобран
+   как ближайший, вопрос на подтверждение дизайн-команде. */
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&display=swap");
 
 :root {
   --violet: #7d4ccf;
@@ -21,7 +25,7 @@
 html, body { margin: 0; }
 body {
   background: var(--bg);
-  font-family: Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+  font-family: Onest, "Helvetica Neue", Arial, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: var(--text);
 }
@@ -194,3 +198,39 @@ body {
 /* --- обложка «как сделать» и обновления ------------------------------------ */
 .tophead { display: flex; align-items: center; justify-content: space-between; }
 .tilt { margin-top: 40px; transform: rotate(-3deg) scale(1.04); transform-origin: 50% 0; }
+
+/* --- обложка вебинара и анонса события ------------------------------------- */
+.datepill {
+  display: inline-flex; align-items: center; gap: 16px;
+  height: 88px; padding: 0 34px;
+  background: var(--violet); color: #fff; border-radius: 22px;
+  font-size: 36px; font-weight: 700; letter-spacing: -.4px;
+}
+.datepill svg { width: 42px; height: 42px; flex-shrink: 0; }
+
+.typepill {
+  display: inline-flex; align-items: center;
+  height: 88px; padding: 0 48px;
+  background: #fff; color: var(--violet); border-radius: 999px;
+  font-size: 34px; font-weight: 700;
+  box-shadow: 0 10px 30px -18px rgba(31, 42, 55, .4);
+}
+
+/* дуга и зигзаг из декора обложки */
+.deco.arc { border-radius: 50%; background: #cbbcee; }
+.deco.zig {
+  width: 150px; height: 6px; background: var(--violet);
+  transform: rotate(-38deg); border-radius: 4px;
+}
+
+/* широкий скриншот, уходящий за правый край кадра */
+.shotwide {
+  position: absolute; border: 3px solid var(--violet); border-radius: 26px;
+  overflow: hidden; background: #fff;
+  box-shadow: 0 40px 80px -50px rgba(31, 42, 55, .55);
+}
+.shotwide img { display: block; width: 100%; }
+.shotwide .stub {
+  display: flex; align-items: center; justify-content: center;
+  background: #fafafa; color: #b8b8c2; font-size: 26px; font-weight: 500;
+}
