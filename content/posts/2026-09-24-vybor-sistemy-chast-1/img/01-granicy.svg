@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&amp;display=swap");
+</style>
+<defs>
+<clipPath id="clip1"><rect x="0" y="0" width="1080" height="1350"/></clipPath>
+</defs>
+<rect x="0" y="0" width="1080" height="1350" fill="rgb(222, 215, 249)"/>
+<rect x="-170" y="-160" width="480" height="430" rx="58" fill="rgb(232, 226, 252)" clip-path="url(#clip1)"/>
+<rect x="820" y="1110" width="400" height="360" rx="58" fill="rgb(232, 226, 252)" clip-path="url(#clip1)"/>
+<text x="76" y="180" textLength="544.41" lengthAdjust="spacing" font-family="Raleway" font-size="68" font-weight="700" letter-spacing="-1.2" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Список функций</text>
+<text x="638.09" y="180" textLength="76.5" lengthAdjust="spacing" font-family="Raleway" font-size="68" font-weight="700" letter-spacing="-1.2" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">не</text>
+<text x="76" y="252.08" textLength="636.3" lengthAdjust="spacing" font-family="Raleway" font-size="68" font-weight="700" letter-spacing="-1.2" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">отвечает на вопрос</text>
+<text x="76" y="326.16" textLength="849.86" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Одинаково названные инструменты внутри работают по-</text>
+<text x="76" y="369.67" textLength="862.22" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">разному. Разница вскрывается уже после переезда, когда</text>
+<text x="76" y="413.19" textLength="899.58" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">привычный процесс приходится собирать вручную из досок,</text>
+<text x="76" y="456.7" textLength="247.56" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">полей и отчетов.</text>
+<rect x="76" y="518.22" width="928" height="208.67" rx="28" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<text x="118" y="590.22" textLength="454.19" lengthAdjust="spacing" font-family="Onest" font-size="33" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Поэтому сначала определите</text>
+<text x="581.36" y="590.22" textLength="332.63" lengthAdjust="spacing" font-family="Onest" font-size="33" font-weight="800" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">границы будущей</text>
+<text x="118" y="635.11" textLength="164.03" lengthAdjust="spacing" font-family="Onest" font-size="33" font-weight="800" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">системы</text>
+<text x="282.03" y="635.11" textLength="561.92" lengthAdjust="spacing" font-family="Onest" font-size="33" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">: какие процессы и команды должны</text>
+<text x="118" y="678" textLength="409.34" lengthAdjust="spacing" font-family="Onest" font-size="33" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">работать в общей системе</text>
+<rect x="76" y="770.89" width="928" height="102" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="790.89" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="830.89" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">1</text>
+<text x="180" y="831.59" textLength="669.27" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Финансовый учет может остаться в 1С или ERP</text>
+<rect x="76" y="896.89" width="928" height="102" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="916.89" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="956.89" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">2</text>
+<text x="180" y="957.59" textLength="560.95" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Код разработчиков — в Git-репозитории</text>
+<rect x="76" y="1022.89" width="928" height="113.19" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="1048.48" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="1088.48" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">3</text>
+<text x="180" y="1070.89" textLength="754.83" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">В систему достаточно передавать связанные данные:</text>
+<text x="180" y="1107.48" textLength="740.56" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">срок поставки, статус оплаты, готовность разработки</text>
+</svg>

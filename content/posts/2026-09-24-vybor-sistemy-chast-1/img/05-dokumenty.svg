@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&amp;display=swap");
+</style>
+<defs>
+<clipPath id="clip1"><rect x="0" y="0" width="1080" height="1350"/></clipPath>
+</defs>
+<rect x="0" y="0" width="1080" height="1350" fill="rgb(222, 215, 249)"/>
+<rect x="790" y="1090" width="450" height="410" rx="58" fill="rgb(232, 226, 252)" clip-path="url(#clip1)"/>
+<text x="76" y="180" textLength="371.55" lengthAdjust="spacing" font-family="Raleway" font-size="68" font-weight="700" letter-spacing="-1.2" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Документы</text>
+<text x="465.23" y="180" textLength="452.73" lengthAdjust="spacing" font-family="Raleway" font-size="68" font-weight="700" letter-spacing="-1.2" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">и база знаний</text>
+<text x="76" y="254.08" textLength="822.42" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Договор достаточно приложить к задаче. А инструкцию</text>
+<text x="76" y="297.59" textLength="781.81" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">сотрудник должен найти через полгода, не помня ни</text>
+<text x="76" y="341.11" textLength="329.28" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">названия, ни раздела.</text>
+<rect x="76" y="392.63" width="928" height="102" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="412.63" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="452.63" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">1</text>
+<text x="180" y="453.33" textLength="774.55" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Входят ли прежние версии файлов в лимит хранилища</text>
+<rect x="76" y="518.63" width="928" height="113.19" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="544.22" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="584.22" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">2</text>
+<text x="180" y="566.63" textLength="692.63" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Новая редакция — это версия того же файла или</text>
+<text x="180" y="603.22" textLength="233.95" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">отдельный файл</text>
+<rect x="76" y="655.81" width="928" height="113.19" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="681.41" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="721.41" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">3</text>
+<text x="180" y="703.81" textLength="742.58" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Права на отдельный документ, а не только на задачу</text>
+<text x="180" y="740.41" textLength="117.58" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">целиком</text>
+<rect x="76" y="793" width="928" height="113.19" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="818.59" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="858.59" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">4</text>
+<text x="180" y="841" textLength="684.84" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Поиск по содержимому страницы, а не только по</text>
+<text x="180" y="877.59" textLength="158.31" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">заголовкам</text>
+<rect x="76" y="930.19" width="928" height="102" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="950.19" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="990.19" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">5</text>
+<text x="180" y="990.89" textLength="750.64" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Публичный доступ к странице, разделу или всей базе</text>
+<text x="76" y="1229.09" textLength="887.19" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="700" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">Проверьте и то, что будет со ссылками после переноса</text>
+<text x="76" y="1270.05" textLength="167.52" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="700" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">документа</text>
+</svg>

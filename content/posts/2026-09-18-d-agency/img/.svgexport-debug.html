@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"/><title>Контекст</title>
+<link rel="stylesheet" href="kaiten.css"/><style>
+img[src="kaiten-logo.svg"] { aspect-ratio: 285.0 / 86.0; }
+</style>
+</head>
+<body data-w="1080" data-h="1080"><div class="frame lav" style="width:1080px;height:1080px">
+<div class="inner">
+<div class="head"><div class="kicker">Контекст</div><div class="counter">01 / 04</div></div>
+<h1 class="h">Семь проектов &mdash; и <span class="hl">координатор не успевает</span></h1>
+<div class="lead">Постановка задач, дедлайны, передача работы между копирайтером,
+дизайнером и клиентом легли <b>на одного человека</b></div>
+<div class="rows">
+  <div class="r">Колонки на доске назывались по месяцам: &laquo;май&raquo;, &laquo;июнь&raquo;</div>
+  <div class="r">В одной карточке сходились доработка за прошлый месяц, текущий контент и план на следующий</div>
+  <div class="r">Чтобы понять этап материала, карточку приходилось открывать и разбирать</div>
+</div>
+<div class="foot"><img class="logo" src="kaiten-logo.svg" alt="Kaiten"/></div>
+</div>
+</div><script>
+/* Экспорт свёрстанной карточки в SVG с живым текстом.
+   Запускается внутри страницы, кладёт результат в textarea между маркерами.
+   Маркер собирается из кусков, чтобы не встретиться в исходнике скрипта: иначе
+   --dump-dom отдаёт сам скрипт, а не результат.
+   Текст становится text, фоны и рамки - rect, картинки - image с data-img,
+   логотип - g с data-logo. Подстановку картинок делает scripts/html-to-svg.py. */
+function kaitenSvgExport() {
+  const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;");
+  const r2 = n => Math.round(n * 100) / 100;
+  const out = [];
+  let clipId = 0;
+  const defs = [];
+
+  const root = document.querySelector(".frame");
+  const rb = root.getBoundingClientRect();
+  const W = Math.round(rb.width), H = Math.round(rb.height);
+  const X0 = rb.left, Y0 = rb.top;
+
+  const canvas = document.createElement("canvas").getContext("2d");
+  const metricsCache = new Map();
+  function fontMetrics(font) {
+    if (!metricsCache.has(font)) {
+      canvas.font = font;
+      const m = canvas.measureText("Нg");
+      metricsCache.set(font, {
+        a: m.fontBoundingBoxAscent || 0,
+        d: m.fontBoundingBoxDescent || 0,
+      });
+    }
+    return metricsCache.get(font);
+  }
+
+  const visible = c => c && c !== "transparent" && !/rgba\([^)]*,\s*0\)$/.test(c);
+
+  // ::before у галочек нельзя обойти обходом текстовых узлов - подменяем настоящим span
+  document.querySelectorAll(".checks li").forEach(li => {
+    const cs = getComputedStyle(li, "::before");
+    const span = document.createElement("span");
+    span.textContent = "✓";
+    span.setAttribute("data-pseudo", "1");
+    span.style.cssText = "position:absolute;left:0;top:2px;width:34px;height:34px;" +
+      "border-radius:50%;background:" + cs.backgroundColor + ";color:" + cs.color +
+      ";font-size:" + cs.fontSize + ";font-weight:" + cs.fontWeight +
+      ";display:flex;align-items:center;justify-content:center;line-height:1";
+    li.insertBefore(span, li.firstChild);
+  });
+  const hide = document.createElement("style");
+  hide.textContent = ".checks li::before{content:none !important}";
+  document.head.appendChild(hide);
+
+  function rect(el) {
+    const b = el.getBoundingClientRect();
+    return { x: b.left - X0, y: b.top - Y0, w: b.width, h: b.height };
+  }
+
+  function emitBox(el, clip) {
+    const s = getComputedStyle(el);
+    if (s.display === "none" || s.visibility === "hidden") return;
+    const b = rect(el);
+    if (b.w <= 0 || b.h <= 0) return;
+    const rx = parseFloat(s.borderTopLeftRadius) || 0;
+    const radius = rx >= Math.min(b.w, b.h) / 2 ? Math.min(b.w, b.h) / 2 : rx;
+    const cl = clip ? ` clip-path="url(#${clip})"` : "";
+
+    if (visible(s.backgroundColor)) {
+      out.push(`<rect x="${r2(b.x)}" y="${r2(b.y)}" width="${r2(b.w)}" height="${r2(b.h)}"` +
+        (radius ? ` rx="${r2(radius)}"` : "") + ` fill="${s.backgroundColor}"${cl}/>`);
+    }
+    const bw = parseFloat(s.borderTopWidth) || 0;
+    if (bw > 0 && visible(s.borderTopColor) && s.borderTopStyle !== "none") {
+      const i = bw / 2;
+      out.push(`<rect x="${r2(b.x + i)}" y="${r2(b.y + i)}" width="${r2(b.w - bw)}" ` +
+        `height="${r2(b.h - bw)}"` + (radius ? ` rx="${r2(Math.max(radius - i, 0))}"` : "") +
+        ` fill="none" stroke="${s.borderTopColor}" stroke-width="${r2(bw)}"` +
+        (s.borderTopStyle === "dashed" ? ` stroke-dasharray="10 8"` : "") + `${cl}/>`);
+    }
+  }
+
+  function emitImage(el, clip) {
+    const b = rect(el);
+    if (b.w > 0 && b.h <= 0 && el.naturalWidth) b.h = b.w * el.naturalHeight / el.naturalWidth;
+    if (b.w <= 0 || b.h <= 0) { console.warn("нулевая картинка:", el.src); return; }
+    const src = el.getAttribute("src") || "";
+    const cl = clip ? ` clip-path="url(#${clip})"` : "";
+    const attr = `x="${r2(b.x)}" y="${r2(b.y)}" width="${r2(b.w)}" height="${r2(b.h)}"`;
+    if (/\.svg($|\?)/i.test(src)) {
+      out.push(`<g data-logo="${esc(src)}" ${attr}${cl}></g>`);
+    } else {
+      out.push(`<image data-img="${esc(src)}" ${attr} preserveAspectRatio="none"${cl}/>`);
+    }
+  }
+
+  function emitText(node, clip) {
+    const el = node.parentElement;
+    const s = getComputedStyle(el);
+    if (s.display === "none" || s.visibility === "hidden") return;
+    const text = node.nodeValue;
+    if (!text || !text.trim()) return;
+    const tt = s.textTransform;
+    const shape = str => tt === "uppercase" ? str.toUpperCase()
+                       : tt === "lowercase" ? str.toLowerCase() : str;
+
+    const fs = parseFloat(s.fontSize);
+    const font = `${s.fontStyle} ${s.fontWeight} ${fs}px ${s.fontFamily}`;
+    const fm = fontMetrics(font);
+    const ls = parseFloat(s.letterSpacing);
+    const family = s.fontFamily.split(",")[0].replace(/["']/g, "").trim();
+    const cl = clip ? ` clip-path="url(#${clip})"` : "";
+
+    // строки собираем посимвольно: у каждого символа свой прямоугольник, группируем по top
+    const lines = [];
+    const rng = document.createRange();
+    for (let i = 0; i < text.length; i++) {
+      rng.setStart(node, i); rng.setEnd(node, i + 1);
+      const r = rng.getBoundingClientRect();
+      if (!r.width && !r.height) { if (lines.length) lines[lines.length - 1].s += text[i]; continue; }
+      const last = lines[lines.length - 1];
+      if (last && Math.abs(last.top - r.top) < 2) { last.s += text[i]; last.right = r.right; }
+      else lines.push({ top: r.top, bottom: r.bottom, left: r.left, right: r.right, s: text[i] });
+    }
+    for (const ln of lines) {
+      const str = ln.s.replace(/\s+$/, "");
+      if (!str.trim()) continue;
+      const lead = (ln.bottom - ln.top - (fm.a + fm.d)) / 2;
+      const baseline = ln.top - Y0 + lead + fm.a;
+      out.push(`<text x="${r2(ln.left - X0)}" y="${r2(baseline)}" ` +
+        `font-family="${esc(family)}" font-size="${r2(fs)}" font-weight="${s.fontWeight}"` +
+        (s.fontStyle !== "normal" ? ` font-style="${s.fontStyle}"` : "") +
+        (ls ? ` letter-spacing="${r2(ls)}"` : "") +
+        ` fill="${s.color}" xml:space="preserve"${cl}>${esc(shape(str))}</text>`);
+    }
+  }
+
+  function walk(el, clip) {
+    if (el.nodeType === 1) {
+      const s = getComputedStyle(el);
+      if (s.display === "none" || s.visibility === "hidden") return;
+      if (el.tagName === "IMG") { emitImage(el, clip); return; }
+      emitBox(el, clip);
+      let childClip = clip;
+      if (s.overflow === "hidden" || s.overflowX === "hidden") {
+        const b = rect(el);
+        const rx = parseFloat(s.borderTopLeftRadius) || 0;
+        const id = `clip${++clipId}`;
+        defs.push(`<clipPath id="${id}"><rect x="${r2(b.x)}" y="${r2(b.y)}" ` +
+          `width="${r2(b.w)}" height="${r2(b.h)}"${rx ? ` rx="${r2(rx)}"` : ""}/></clipPath>`);
+        childClip = id;
+      }
+      for (const n of el.childNodes) walk(n, childClip);
+    } else if (el.nodeType === 3) {
+      emitText(el, clip);
+    }
+  }
+
+  const fonts = [...document.styleSheets]
+    .flatMap(ss => { try { return [...ss.cssRules]; } catch (e) { return []; } })
+    .filter(r => r.type === CSSRule.IMPORT_RULE && /fonts[.]googleapis/.test(r.href))
+    .map(r => '@import url("' + r.href + '");').join("
+");
+  const fontStyle = fonts ? "<style>
+" + fonts + "
+</style>
+" : "";
+
+  walk(root, null);
+
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ` +
+    `width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">\n${fontStyle}<defs>\n${defs.join("\n")}\n</defs>\n` +
+    out.join("\n") + `\n</svg>`;
+
+  return svg;
+}
+
+// Экспорт синхронный, прямо при разборе страницы.
+//
+// ⚠️ Ждать здесь нельзя ничем: под --dump-dom и --virtual-time-budget Chrome снимает
+// DOM раньше, чем сработает window.onload или разрешится document.fonts.ready.
+// Обе попытки проверены 18.09.2026, обе отдавали пустой DOM.
+// Поэтому размеры картинок не берутся из загрузки: scripts/html-to-svg.py заранее
+// проставляет каждой <img> aspect-ratio, и высота известна до того, как файл скачан.
+(function () {
+  const MARK = "@@" + "KAITEN-SVG" + "@@";
+  const ta = document.createElement("textarea");
+  ta.id = "kaiten-svg-out";
+  try {
+    ta.textContent = MARK + kaitenSvgExport() + MARK;
+  } catch (e) {
+    ta.textContent = MARK + "ОШИБКА ЭКСПОРТА: " + (e && e.stack || e) + MARK;
+  }
+  document.body.appendChild(ta);
+})();
+
+</script>
+</body></html>

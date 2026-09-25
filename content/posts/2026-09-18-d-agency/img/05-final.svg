@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&amp;display=swap");
+</style>
+<defs>
+<clipPath id="clip1"><rect x="0" y="0" width="1080" height="1080"/></clipPath>
+</defs>
+<rect x="0" y="0" width="1080" height="1080" fill="rgb(240, 237, 250)"/>
+<text x="76" y="98" textLength="159.69" lengthAdjust="spacing" font-family="Raleway" font-size="26" font-weight="700" letter-spacing="1.4" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">РЕЗУЛЬТАТ</text>
+<text x="922.39" y="98" textLength="81.61" lengthAdjust="spacing" font-family="Onest" font-size="26" font-weight="500" letter-spacing="0.6" fill="rgb(165, 165, 173)" xml:space="preserve" clip-path="url(#clip1)">Вывод</text>
+<text x="76" y="205" textLength="487" lengthAdjust="spacing" font-family="Raleway" font-size="62" font-weight="700" letter-spacing="-1.2" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">16 проектов — и</text>
+<text x="579.03" y="205" textLength="296.61" lengthAdjust="spacing" font-family="Raleway" font-size="62" font-weight="700" letter-spacing="-1.2" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">ни одного</text>
+<text x="76" y="271.95" textLength="314.44" lengthAdjust="spacing" font-family="Raleway" font-size="62" font-weight="700" letter-spacing="-1.2" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">проджекта</text>
+<rect x="76" y="332.91" width="34" height="34" rx="17" fill="rgb(239, 233, 249)" clip-path="url(#clip1)"/>
+<text x="85.13" y="357.41" textLength="15.73" lengthAdjust="spacing" font-family="Onest" font-size="21" font-weight="900" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">✓</text>
+<text x="128" y="360.91" textLength="226.36" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">Проектов стало</text>
+<text x="362.97" y="360.91" textLength="178.31" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="700" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">16 вместо 7</text>
+<text x="541.28" y="360.91" textLength="398.69" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">, отдельной роли проджект-</text>
+<text x="128" y="401.81" textLength="374.78" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">менеджера в команде нет</text>
+<rect x="76" y="448.72" width="34" height="34" rx="17" fill="rgb(239, 233, 249)" clip-path="url(#clip1)"/>
+<text x="85.13" y="473.22" textLength="15.73" lengthAdjust="spacing" font-family="Onest" font-size="21" font-weight="900" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">✓</text>
+<text x="128" y="476.72" textLength="518.2" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">Статус проекта директор проверяет</text>
+<text x="654.81" y="476.72" textLength="314.48" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="700" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">примерно за минуту</text>
+<text x="969.3" y="476.72" textLength="8.63" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">:</text>
+<text x="128" y="517.63" textLength="778.08" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">видно, где каждая задача, что задержалось и сколько</text>
+<text x="128" y="558.53" textLength="344.09" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">времени уже потрачено</text>
+<rect x="76" y="605.44" width="34" height="34" rx="17" fill="rgb(239, 233, 249)" clip-path="url(#clip1)"/>
+<text x="85.13" y="629.94" textLength="15.73" lengthAdjust="spacing" font-family="Onest" font-size="21" font-weight="900" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">✓</text>
+<text x="128" y="633.44" textLength="194.58" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">Правок стало</text>
+<text x="331.19" y="633.44" textLength="376.77" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="700" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">в несколько раз меньше</text>
+<text x="707.95" y="633.44" textLength="289.75" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">: регламенты и база</text>
+<text x="128" y="674.34" textLength="777.75" lengthAdjust="spacing" font-family="Onest" font-size="31" font-weight="400" fill="rgb(45, 45, 45)" xml:space="preserve" clip-path="url(#clip1)">знаний лежат в том же пространстве, где идет работа</text>
+<rect x="76" y="867.81" width="928" height="150.19" rx="20" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="116" y="931.81" textLength="498.08" lengthAdjust="spacing" font-family="Raleway" font-size="32" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">Шаблон пространства из кейса</text>
+<text x="116" y="975.2" textLength="576.05" lengthAdjust="spacing" font-family="Onest" font-size="26" font-weight="400" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">Собран по рассказу Игоря, можно забрать себе</text>
+<rect x="896" y="908.91" width="68" height="68" rx="34" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<text x="915" y="952.91" textLength="30" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="400" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">→</text>
+</svg>

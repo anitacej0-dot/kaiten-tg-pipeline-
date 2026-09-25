@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&amp;display=swap");
+</style>
+<defs>
+<clipPath id="clip1"><rect x="0" y="0" width="1080" height="1350"/></clipPath>
+</defs>
+<rect x="0" y="0" width="1080" height="1350" fill="rgb(222, 215, 249)"/>
+<rect x="-160" y="1090" width="440" height="400" rx="58" fill="rgb(232, 226, 252)" clip-path="url(#clip1)"/>
+<text x="76" y="180" textLength="552.41" lengthAdjust="spacing" font-family="Raleway" font-size="68" font-weight="700" letter-spacing="-1.2" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Уровень проекта</text>
+<text x="646.09" y="180" textLength="40.61" lengthAdjust="spacing" font-family="Raleway" font-size="68" font-weight="700" letter-spacing="-1.2" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">и</text>
+<text x="76" y="252.08" textLength="309.33" lengthAdjust="spacing" font-family="Raleway" font-size="68" font-weight="700" letter-spacing="-1.2" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">иерархия</text>
+<text x="76" y="326.16" textLength="820.45" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Руководителю мало карточек задач. Нужно видеть сам</text>
+<text x="76" y="369.67" textLength="814.38" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">проект: кто отвечает, когда заканчивается и в каком он</text>
+<text x="76" y="413.19" textLength="272.92" lengthAdjust="spacing" font-family="Onest" font-size="32" font-weight="400" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">состоянии сейчас.</text>
+<rect x="76" y="464.7" width="928" height="102" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="484.7" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="524.7" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">1</text>
+<text x="180" y="525.41" textLength="656.19" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Ответственный, общие сроки и текущий статус</text>
+<rect x="76" y="590.7" width="928" height="113.19" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="616.3" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="656.3" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">2</text>
+<text x="180" y="638.7" textLength="761.86" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Контрольные точки: важные даты и результаты внутри</text>
+<text x="180" y="675.3" textLength="109.86" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">проекта</text>
+<rect x="76" y="727.89" width="928" height="113.19" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="753.48" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="793.48" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">3</text>
+<text x="180" y="775.89" textLength="761.64" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Прогресс по входящим задачам и по каким данным он</text>
+<text x="180" y="812.48" textLength="137.48" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">считается</text>
+<rect x="76" y="865.08" width="928" height="102" rx="24" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<rect x="96" y="885.08" width="62" height="62" rx="31" fill="rgb(125, 76, 207)" clip-path="url(#clip1)"/>
+<text x="119.2" y="925.08" textLength="15.58" lengthAdjust="spacing" font-family="Onest" font-size="28" font-weight="700" fill="rgb(255, 255, 255)" xml:space="preserve" clip-path="url(#clip1)">4</text>
+<text x="180" y="925.78" textLength="619.67" lengthAdjust="spacing" font-family="Onest" font-size="30" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Несколько проектов в одном представлении</text>
+<rect x="76" y="1071.33" width="928" height="208.67" rx="28" fill="rgb(255, 255, 255)" clip-path="url(#clip1)"/>
+<text x="118" y="1141.33" textLength="745.39" lengthAdjust="spacing" font-family="Onest" font-size="33" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Проверка на пилоте: задержите одну подзадачу.</text>
+<text x="118" y="1186.22" textLength="597.02" lengthAdjust="spacing" font-family="Onest" font-size="33" font-weight="500" fill="rgb(69, 63, 77)" xml:space="preserve" clip-path="url(#clip1)">Станет ли понятно на верхнем уровне,</text>
+<text x="724.19" y="1186.22" textLength="132.41" lengthAdjust="spacing" font-family="Onest" font-size="33" font-weight="800" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">что эта</text>
+<text x="118" y="1231.11" textLength="431.63" lengthAdjust="spacing" font-family="Onest" font-size="33" font-weight="800" fill="rgb(125, 76, 207)" xml:space="preserve" clip-path="url(#clip1)">часть проекта отстает?</text>
+</svg>

@@ -32,6 +32,7 @@
 | **Дайджест обновлений** | 880-1950 | 637-957 | 7-18 | декоративная обложка + карусель |
 | **Обновление и фича** | 750-1550 | 758-1350 | 16-30 | обложка со скриншотом + карусель со счётчиком |
 | **Кейс и статья** | 820-1050 | 787-928 | 9-26 | карусель |
+| **Статья и мнение экспертов** | 500-1100 | 1060 | 19 | карусель 4:5 с фото экспертов |
 
 Анатомия каждого типа со скелетами - [docs/POST-TYPES.md](docs/POST-TYPES.md).
 
@@ -73,6 +74,7 @@ python scripts/validate-post.py content/posts/<slug>/post.md --type=дайдже
 python scripts/extract-variant.py content/posts/<slug>/post.md 1  # текст к публикации
 python scripts/check-facts.py                                  # долги по факту
 python scripts/render-images.py content/posts/<slug>/img/*.html   # HTML → PNG 2×
+python scripts/html-to-svg.py content/posts/<slug>/img/*.html     # HTML → SVG для Фигмы
 node scripts/render-images.mjs content/posts/<slug>/img/*.html    # то же на Node
 ```
 
